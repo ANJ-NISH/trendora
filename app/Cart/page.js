@@ -34,7 +34,7 @@ export default function Cart()
             const decoded = jwtDecode(token);
             const res = await axios.get(`/api/fetchCart?userId=${decoded.userId}`);
             setCartProd(res.data.cartitems);
-            // setCart(res.data.cartitems);
+            setCart(res.data.cartitems);
           } catch (err) {
             console.error("Error fetching cart:", err);
           } finally {
