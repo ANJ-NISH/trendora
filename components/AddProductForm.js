@@ -128,8 +128,8 @@ const [loading, setLoading] = useState(false);
             <option value="" disabled>
               Select category
             </option>
-            <option value="Men's clothes">Men's clothes</option>
-            <option value="Women's clothes">Women's clothes</option>
+            <option value="Men's clothes">Men clothes</option>
+            <option value="Women's clothes">Women clothes</option>
             <option value="Footwear">Footwear</option>
             <option value="Watches">Watches</option>
             <option value="Speakers">Speakers</option>

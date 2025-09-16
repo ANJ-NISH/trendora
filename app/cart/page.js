@@ -8,6 +8,7 @@ import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 
 export default function Cart()
@@ -76,7 +77,8 @@ export default function Cart()
                     key={product.name}
                     className="flex items-center gap-4 bg-[#1B263B] rounded-2xl shadow-md p-4"
                   >
-                    <img
+                    <Image height={96}
+                    width={96}
                       src={product.image}
                       alt={product.name}
                       className="w-24 h-24 object-cover rounded-xl"
