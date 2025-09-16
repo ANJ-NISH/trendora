@@ -5,8 +5,9 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
 import axios from "axios";
+import { Suspense } from "react";
 
-export default function Checkout() {
+export function Checkout() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -241,5 +242,14 @@ export default function Checkout() {
 
       <Footer />
     </>
+  );
+}
+
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={<div>Loading checkout...</div>}>
+      <Checkout />
+    </Suspense>
   );
 }
